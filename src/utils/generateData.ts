@@ -27,14 +27,14 @@ export const generateData = (): FinancialData[] => {
     data.push({
       division: "B2B",
       date: date.toISOString(),
-      amount: Math.floor(Math.random() * 500000) + 100000,
+      amount: Math.floor(Math.random() * 1000000) - 500000,
       type: OPERATION_TYPES[Math.floor(Math.random() * OPERATION_TYPES.length)],
     });
 
     data.push({
       division: "B2C",
       date: date.toISOString(),
-      amount: Math.floor(Math.random() * 300000) + 50000,
+      amount: Math.floor(Math.random() * 1000000) - 500000,
       type: OPERATION_TYPES[Math.floor(Math.random() * OPERATION_TYPES.length)],
     });
   }

@@ -1,0 +1,76 @@
+.card_block {
+  display: flex;
+}
+
+.card {
+  border: 0px solid #eee;
+  border-radius: 24px;
+  background-color: white;
+  color: #323f47;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.selected {
+    color: #ffffff;
+    &.positive {
+      background-color: #54d3c2;
+    }
+    &.negative {
+      background-color: #fc5c65;
+    }
+  }
+}
+
+.card_title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.56px;
+  color: #323f47;
+  &.selected {
+    color: #ffffff;
+  }
+}
+
+.card_value {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.56px;
+  color: #323f47;
+  &.selected {
+    color: #ffffff;
+  }
+}
+
+.percentage_block {
+  border-radius: 24px;
+  &.positive {
+    background-color: rgba(84, 211, 194, 0.15);
+    &.selected {
+      background-color: rgba(248, 248, 248, 0.25);
+    }
+  }
+  &.negative {
+    background-color: rgba(252, 92, 101, 0.15);
+    &.selected {
+      background-color: rgb(255, 231, 232, 0.25);
+    }
+  }
+  .percentage {
+    font-weight: 600;
+    &.positive {
+      color: #54d3c2;
+      &.selected {
+        color: #ffffff;
+      }
+    }
+    &.negative {
+      color: rgba(252, 92, 101, 1);
+      &.selected {
+        color: #ffffff;
+      }
+    }
+  }
+}

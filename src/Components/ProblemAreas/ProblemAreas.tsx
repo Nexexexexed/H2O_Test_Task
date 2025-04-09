@@ -11,7 +11,7 @@ const getIconColor = (count: number): "danger" | "warning" | null => {
 
 const ProblemAreas = () => {
   return (
-    <div className={styles.card}>
+    <aside className={styles.card}>
       <h3 className={styles.title}>Проблемные зоны</h3>
       <ul className={styles.list}>
         {problemAreasMass.map(({ area, count }, index) => {
@@ -34,7 +34,7 @@ const ProblemAreas = () => {
           );
         })}
       </ul>
-    </div>
+    </aside>
   );
 };
 
