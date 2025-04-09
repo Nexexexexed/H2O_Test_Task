@@ -63,6 +63,6 @@ const PROBLEM_AREAS = [
 export const generateProblemAreas = (): ProblemArea[] => {
   return PROBLEM_AREAS.filter(() => Math.random() > 0.3).map((area) => ({
     area,
-    count: Math.floor(Math.random() * 950000) + 50001,
+    count: Math.floor(Math.random() * 50000 + 10000),
   }));
 };

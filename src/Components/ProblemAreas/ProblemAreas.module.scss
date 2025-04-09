@@ -1,0 +1,65 @@
+.card {
+  border-radius: 32px;
+  background: white;
+  padding: 30px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.iconContainer {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: white;
+  font-weight: 800;
+
+  &.danger {
+    background-color: #fc5c65;
+  }
+
+  &.warning {
+    background-color: #f7b731;
+  }
+}
+
+.icon {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.areaName {
+  color: #6d7986;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.amount {
+  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
+}

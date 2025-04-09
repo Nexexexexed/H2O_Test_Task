@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FinancialData, generateData } from "../../utils/generateData";
+import ProblemAreas from "../ProblemAreas/ProblemAreas";
 import styles from "./styles.module.css";
 
 const Dashboard = () => {
@@ -19,8 +20,7 @@ const Dashboard = () => {
           <h1>Сводный отчет</h1>
         </Col>
       </Row>
-
-      {/* Здесь будут компоненты */}
+      <ProblemAreas />
     </Container>
   );
 };
