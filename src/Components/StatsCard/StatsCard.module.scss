@@ -26,7 +26,7 @@
 
 .card_title {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.56px;
   color: #323f47;
   &.selected {
@@ -36,7 +36,7 @@
 
 .card_value {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.56px;
   color: #323f47;
   &.selected {
@@ -45,7 +45,12 @@
 }
 
 .percentage_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 24px;
+  width: 144px;
+  height: 36px;
   &.positive {
     background-color: rgba(84, 211, 194, 0.15);
     &.selected {
@@ -60,6 +65,8 @@
   }
   .percentage {
     font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.56px;
     &.positive {
       color: #54d3c2;
       &.selected {

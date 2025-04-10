@@ -1,4 +1,4 @@
-import { subMonths } from "date-fns";
+import { subDays } from "date-fns";
 
 type Division = "B2B" | "B2C";
 type OperationType = "expenses" | "income" | "revenue" | "debt";
@@ -21,21 +21,18 @@ export const generateData = (): FinancialData[] => {
   const data: FinancialData[] = [];
   const now = new Date();
 
-  for (let i = 0; i < 12; i++) {
-    const date = subMonths(now, i);
+  for (let i = 0; i < 365; i++) {
+    const date = subDays(now, i);
 
-    data.push({
-      division: "B2B",
-      date: date.toISOString(),
-      amount: Math.floor(Math.random() * 1000000) - 500000,
-      type: OPERATION_TYPES[Math.floor(Math.random() * OPERATION_TYPES.length)],
-    });
-
-    data.push({
-      division: "B2C",
-      date: date.toISOString(),
-      amount: Math.floor(Math.random() * 1000000) - 500000,
-      type: OPERATION_TYPES[Math.floor(Math.random() * OPERATION_TYPES.length)],
+    ["B2B", "B2C"].forEach((division) => {
+      data.push({
+        division: division as Division,
+        date: date.toISOString(),
+        amount: Math.floor(Math.random() * 1000000) - 500000,
+        type: OPERATION_TYPES[
+          Math.floor(Math.random() * OPERATION_TYPES.length)
+        ],
+      });
     });
   }
 

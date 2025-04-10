@@ -53,7 +53,7 @@ const Dashboard = () => {
             onClick={() => setSelectedCard("b2c")}
           />
         </div>
-        <FinancialChart />
+        <FinancialChart data={data} selectedCard={selectedCard} />
       </div>
       <ProblemAreas />
     </main>

@@ -1,6 +1,112 @@
-.graph {
-  width: 1000px;
-  height: 600px;
-  background-color: white;
+.chartContainer {
+  background: white;
   border-radius: 32px;
+  padding: 30px;
+  min-width: 800px;
+  min-height: 400px;
+}
+
+.viewBlock {
+  margin-bottom: 20px;
+}
+
+.viewSwitch {
+  display: flex;
+  gap: 15px;
+  position: relative;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+    color: #d2d1d1;
+    letter-spacing: 0.44px;
+    transition: color 0.2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color 0.3s;
+      transform: translateY(2px);
+    }
+
+    &:hover::after {
+      background-color: #d3d3d3;
+    }
+  }
+
+  .active {
+    color: #323f47;
+
+    &::after {
+      background-color: #54d3c2;
+    }
+  }
+}
+
+.viewText {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.56px;
+  color: rgba(45, 66, 88, 1);
+}
+
+.viewBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle {
+  list-style-type: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  margin-right: 10px;
+  &.revenue {
+    background-color: rgba(115, 207, 122, 1);
+  }
+  &.expenses {
+    background-color: rgba(48, 199, 220, 1);
+  }
+  &.income {
+    background-color: rgba(69, 170, 242, 1);
+  }
+  &.debt {
+    background-color: rgba(245, 226, 48, 1);
+  }
+  &.total {
+    background-color: rgba(172, 116, 252, 1);
+  }
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  max-width: 150px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: -0.56px;
+
+  .text_name {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(109, 121, 134, 1);
+  }
+  .text_amount {
+    font-weight: 700;
+    font-size: 16px;
+    color: rgba(50, 63, 71, 1);
+  }
 }

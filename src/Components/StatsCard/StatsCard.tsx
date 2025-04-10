@@ -61,8 +61,10 @@ const StatsCard = ({
       >
         ₽ {value.toLocaleString("ru-RU").replace(/,/g, " ")}
       </div>
-      <div className={`${styles.title} ${isSelected ? styles.selected : ""}`}>
-        <strong>{title}</strong>
+      <div
+        className={`${styles.card_title} ${isSelected ? styles.selected : ""}`}
+      >
+        {title}
       </div>
     </button>
   );
