@@ -1,5 +1,7 @@
 .stats_cards {
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.5em;
 }
 
 .main_block {
@@ -9,10 +11,24 @@
 
 .main {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   position: relative;
-  border-radius: 56px;
+  border-radius: 56px 56px 0px 0px;
   z-index: 2;
   background-color: #f8f8f8;
+  height: 91%;
+}
+
+.header {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.56px;
+  padding: 2% 2%;
+  margin-left: 10%;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px 50px;
 }

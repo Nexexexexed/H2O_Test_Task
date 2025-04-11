@@ -2,18 +2,23 @@
   display: flex;
   height: 100vh;
   width: 100vw;
+  background: linear-gradient(#54d3c2, #30898a);
+}
+.right_bar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 56px 0px 0px 0px;
 }
 
 //Здесь все для сайдбара, потом декомпозировать
 
 .sidebar {
-  background: linear-gradient(#54d3c2, #30898a);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 25px;
   padding-top: 25px;
-  padding-right: 150px;
+  padding-right: 50px;
 
   button {
     background: none;
