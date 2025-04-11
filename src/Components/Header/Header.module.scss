@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background-color: #fff;
+}
+
+.header_nav button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header_nav button:hover {
+  background-color: #f0f0f0;
+}
+
+.header_tabs {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.tab_container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 2px solid #dcdcdc;
+}
+
+.tab {
+  font-size: 14px;
+  color: #b0b0b0;
+  padding: 10px 12px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.active {
+  color: #1c1c1c;
+  font-weight: 600;
+}
+
+.underline {
+  position: absolute;
+  bottom: -2px;
+  height: 4px;
+  background-color: #3ad6c1;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.header_profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header_avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nickname {
+  font-weight: 600;
+  color: #333;
+}
+
+.post {
+  font-size: 12px;
+  color: #888;
+}
