@@ -11,7 +11,7 @@
   background: white;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
   width: 40px;
   height: 40px;
   margin-right: 8px;
@@ -38,23 +38,27 @@
 }
 
 .tab {
-  font-size: 14px;
-  color: #b0b0b0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.44px;
+  color: rgba(210, 209, 209, 1);
   padding: 10px 12px;
   pointer-events: none;
   white-space: nowrap;
 }
 
 .active {
-  color: #1c1c1c;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.44px;
+  color: rgba(50, 63, 71, 1);
 }
 
 .underline {
   position: absolute;
   bottom: -2px;
   height: 4px;
-  background-color: #3ad6c1;
+  background-color: rgba(84, 211, 194, 1);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
