@@ -4,7 +4,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Header = () => {
   const tabs = [
@@ -22,6 +22,19 @@ const Header = () => {
   const handleNext = () => {
     setActiveTab((prev) => (prev + 1) % tabs.length);
   };
+
+  useEffect(() => {
+    if (tabRefs.current[activeTab]) {
+      const { offsetWidth, offsetLeft } = tabRefs.current[activeTab]!;
+      const underline = document.querySelector(
+        `.${styles.underline}`
+      ) as HTMLElement;
+      if (underline) {
+        underline.style.width = `${offsetWidth}px`;
+        underline.style.left = `${offsetLeft}px`;
+      }
+    }
+  }, [activeTab]);
 
   return (
     <header className={styles.header}>

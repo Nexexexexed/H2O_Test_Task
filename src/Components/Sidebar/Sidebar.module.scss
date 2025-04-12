@@ -12,6 +12,12 @@
     padding: 0;
     width: 64px;
     height: 64px;
+    transition: background-color 0.25s ease, border-radius 0.5s ease;
+  }
+
+  button:hover {
+    background-color: rgba(169, 233, 224, 0.2);
+    border-radius: 16px;
   }
 
   .active {

@@ -3,6 +3,7 @@
 }
 
 .card {
+  position: relative;
   border: 0px solid #eee;
   border-radius: 24px;
   background-color: white;
@@ -14,12 +15,39 @@
   align-items: center;
   width: 250px;
   height: 160px;
+  transform: border 1s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 24px;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s ease, border-color 0.3s ease;
+  }
+
+  &:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+
+  &.positive:hover::before {
+    border-color: #54d3c2;
+  }
+
+  &.negative:hover::before {
+    border-color: #fc5c65;
+  }
 
   &.selected {
     color: #ffffff;
     &.positive {
       background-color: #54d3c2;
     }
+
     &.negative {
       background-color: #fc5c65;
     }

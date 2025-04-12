@@ -2,6 +2,7 @@ import { FinancialData } from "../../utils/generateData";
 import styles from "./StatsCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { calculateValue } from "../../utils/calculateValue";
 
 interface StatsCardProps {
   title: string;
@@ -20,16 +21,7 @@ const StatsCard = ({
   isSelected,
   onClick,
 }: StatsCardProps) => {
-  const calculateValue = () => {
-    const filtered = data.filter((item) => {
-      if (mode === "b2b") return item.division === "B2B";
-      if (mode === "b2c") return item.division === "B2C";
-      return true;
-    });
-    return filtered.reduce((sum, item) => sum + item.amount, 0);
-  };
-
-  const value = calculateValue();
+  const value = calculateValue(mode, data);
 
   return (
     <button

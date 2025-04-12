@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FinancialData, generateData } from "../../utils/generateData";
 import ProblemAreas from "../ProblemAreas/ProblemAreas";
 import StatsCard from "../StatsCard/StatsCard";
-import FinancialChart from "../FinancialChart/FinancialChart";
+import { FinancialChart } from "../FinancialChart/FinancialChart";
 
 import styles from "./styles.module.scss";
 
@@ -21,8 +21,6 @@ const Dashboard = () => {
   useEffect(() => {
     setData(generateData());
   }, []);
-
-  console.log(data);
 
   return (
     <main className={styles.main}>
