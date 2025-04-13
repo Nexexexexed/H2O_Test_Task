@@ -6,6 +6,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef, useEffect } from "react";
 
+import img from "/avatar.png";
+
 const Header = () => {
   const tabs = [
     "Свод данных по сотрудникам",
@@ -74,7 +76,7 @@ const Header = () => {
 
       <div className={styles.header_profile}>
         <div className={styles.header_avatar}>
-          <img src="/avatar.png" alt="avatar" />
+          <img src={img} alt="avatar" />
         </div>
         <div className={styles.text}>
           <div className={styles.nickname}>Kristina 🐰</div>

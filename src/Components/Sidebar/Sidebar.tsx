@@ -12,11 +12,13 @@ import {
 
 import styles from "./Sidebar.module.scss";
 
+import img from "/group.png";
+
 const Sidebar = () => {
   const [usingSidebar, setusingSidebar] = useState("faChartPie");
   return (
     <nav className={styles.sidebar}>
-      <img src="/group.png"></img>
+      <img src={img}></img>
       <div className={styles.group_ico}>
         <button
           className={usingSidebar === "faCalendarAlt" ? `${styles.active}` : ""}
