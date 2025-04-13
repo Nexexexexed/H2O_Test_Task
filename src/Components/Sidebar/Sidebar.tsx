@@ -16,7 +16,7 @@ const Sidebar = () => {
   const [usingSidebar, setusingSidebar] = useState("faChartPie");
   return (
     <nav className={styles.sidebar}>
-      <img src="/Group.png"></img>
+      <img src="/group.png"></img>
       <div className={styles.group_ico}>
         <button
           className={usingSidebar === "faCalendarAlt" ? `${styles.active}` : ""}
